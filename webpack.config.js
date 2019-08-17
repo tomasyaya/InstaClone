@@ -1,13 +1,13 @@
- const HtmlWebpckPlugin = require('html-webpack-plugin');
+ const HtmlWebpackPlugin = require('html-webpack-plugin');
  
  module.exports = {
    output: {
      filename: 'app.bundle.js'
    },
    plugins: [
-      new HtmlWebpckPlugin(
+      new HtmlWebpackPlugin(
         {
-          template: 'src/index.html'
+          template: './src/index.html'
         }
       )
     ],
@@ -19,14 +19,13 @@
           use: {
             loader: 'babel-loader',
             options: {
-              presents: [
+              presets: [
                 '@babel/preset-env',
                 '@babel/preset-react',
               ]
             }
           }
-        },
+        }
       ]
-    }
+    },
  }
- 
